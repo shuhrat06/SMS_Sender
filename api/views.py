@@ -16,6 +16,7 @@ class SendSeveralSMSView(APIView):
     def post(self, request):
         data = request.data
         smss = []
+        print(data)
         for i in data:
             try:
                 print(i)
