@@ -18,6 +18,7 @@ class SendSeveralSMSView(APIView):
         smss = []
         for i in data:
             try:
+                print(i)
                 smss.append(NewSms(
                     phone = i.get('phone'),
                     msg = i.get('msg')
