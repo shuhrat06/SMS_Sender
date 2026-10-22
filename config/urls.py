@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import SendSMSView
+from api.views import SendSMSView, SendSeveralSMSView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/send_sms/', SendSMSView.as_view())
+    path('api/send_sms/', SendSMSView.as_view()),
+    path('api/send_several_sms/', SendSeveralSMSView.as_view())
 
 ]
