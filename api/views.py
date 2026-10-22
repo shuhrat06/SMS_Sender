@@ -23,7 +23,7 @@ class SendSeveralSMSView(APIView):
                     msg = i.get('msg')
                 ))
             except:
-                continue
+                print('--NewSms obyekt yaratilmadi...')
         if smss:
             NewSms.objects.bulk_create(smss)
         return Response(status=status.HTTP_200_OK)
